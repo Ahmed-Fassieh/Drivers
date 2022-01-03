@@ -1,0 +1,13 @@
+#include "../../MCAL/01_DIO/DIO_interface.h"
+#include "../../Liberary/STD_TYPES.h"
+#include "../../Liberary/BIT_MATH.h"
+
+
+void Stepper_vid_Direction(u8 Rot_Dir)
+{
+	if(Rot_Dir==0)
+	{
+		DIO_u8SetPinDirection(H_Bridge_Port,TR1,output);
+		DIO_u8GetPinValue()
+	}
+}

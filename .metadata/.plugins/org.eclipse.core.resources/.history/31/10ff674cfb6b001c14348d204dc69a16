@@ -1,0 +1,8 @@
+#ifndef H_BRIDGE_CONFIGURATION_H
+#define H_BRIDGE_CONFIGURATION_H
+
+#define	ClockWise	0
+#define	Anti_ClockWise	1
+
+
+#endif

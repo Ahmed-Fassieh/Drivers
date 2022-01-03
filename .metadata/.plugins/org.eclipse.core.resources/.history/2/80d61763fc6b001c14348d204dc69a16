@@ -1,0 +1,27 @@
+#include "../../Liberary/STD_TYPES.h"
+#include "../../Liberary/BIT_MATH.h"
+#include "../../MCAL/01_DIO/DIO_interface.h"
+#include "H_Bridge_configuration.h"
+
+
+void Stepper_vid_Direction(u8 Rot_Dir)
+{
+	if(Rot_Dir == ClockWise)
+	{
+		DIO_u8SetPinDirection(H_Bridge_Port,TR1,output);
+		DIO_u8SetPinDirection(H_Bridge_Port,TR2,output);
+		DIO_u8SetPinDirection(H_Bridge_Port,TR3,output);
+		DIO_u8SetPinDirection(H_Bridge_Port,TR4,output);
+
+		DIO_u8GetPinValue(H_Bridge_Port,TR2,pinLow);
+		DIO_u8GetPinValue(H_Bridge_Port,TR4,pinLow);
+
+		DIO_u8GetPinValue(H_Bridge_Port,TR1,pinHigh);
+		DIO_u8GetPinValue(H_Bridge_Port,TR3,pinHigh);
+	}
+
+	else if(Rot_Dir == Anti_ClockWise)
+	{
+
+	}
+}

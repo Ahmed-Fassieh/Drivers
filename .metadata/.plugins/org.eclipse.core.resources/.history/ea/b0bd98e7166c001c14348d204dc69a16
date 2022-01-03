@@ -1,0 +1,29 @@
+#include "../../Liberary/STD_TYPES.h"
+#include "../../Liberary/BIT_MATH.h"
+#include "../../MCAL/01_DIO/DIO_interface.h"
+#include "Stepper_configuration.h"
+#include "Stepper_inerface.h"
+
+
+void StepperMotor_vid_OFF(void)
+{
+	DIO_u8SetPinDirection(Stepper_Port,TR1,output);
+	DIO_u8SetPinDirection(Stepper_Port,TR2,output);
+	DIO_u8SetPinDirection(Stepper_Port,TR3,output);
+	DIO_u8SetPinDirection(Stepper_Port,TR4,output);
+
+	DIO_u8SetPinValue(Stepper_Port,TR1,pinLow);
+	DIO_u8SetPinValue(Stepper_Port,TR2,pinLow);
+	DIO_u8SetPinValue(Stepper_Port,TR3,pinLow);
+	DIO_u8SetPinValue(Stepper_Port,TR4,pinLow);
+}
+
+void HalfStepStepperMotor_vid_Direction_ON(u8 Rot_u8_Dir , u8 u8_Angle)
+{
+
+}
+
+void FullStepStepperMotor_vid_Direction_ON(u8 Rot_u8_Dir , u8 u8_Angle)
+{
+
+}

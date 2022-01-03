@@ -1,0 +1,8 @@
+#ifndef STEPPER_INTERFACE_H
+#define STEPPER_INTERFACE_H
+
+void StepperMotor_vid_OFF(void);
+void HalfStepStepperMotor_vid_Direction_ON(u8 Rot_u8_Dir , u8 u8_Angle);
+void FullStepStepperMotor_vid_Direction_ON(u8 Rot_u8_Dir , u8 u8_Angle);
+
+#endif

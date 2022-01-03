@@ -1,0 +1,23 @@
+00:38:55 **** Incremental Build of configuration Debug for project 01_DIO ****
+make all 
+Building file: ../MCAL/01_DIO/DIO_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/01_DIO/DIO_prog.d" -MT"MCAL/01_DIO/DIO_prog.o" -c -o "MCAL/01_DIO/DIO_prog.o" "../MCAL/01_DIO/DIO_prog.c"
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPinDirection':
+../MCAL/01_DIO/DIO_prog.c:36: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPinValue':
+../MCAL/01_DIO/DIO_prog.c:64: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8GetPinValue':
+../MCAL/01_DIO/DIO_prog.c:77: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPortDirection':
+../MCAL/01_DIO/DIO_prog.c:144: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPortValue':
+../MCAL/01_DIO/DIO_prog.c:205: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8GetPortValue':
+../MCAL/01_DIO/DIO_prog.c:234: warning: control reaches end of non-void function
+Finished building: ../MCAL/01_DIO/DIO_prog.c
+ 
+make: *** No rule to make target `zzz.o', needed by `01_DIO.elf'.  Stop.
+
+00:38:56 Build Finished (took 515ms)
+

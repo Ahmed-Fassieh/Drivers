@@ -1,0 +1,50 @@
+00:35:11 **** Incremental Build of configuration Debug for project asd ****
+make all 
+Building file: ../MCAL/01_DIO/DIO_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/01_DIO/DIO_prog.d" -MT"MCAL/01_DIO/DIO_prog.o" -c -o "MCAL/01_DIO/DIO_prog.o" "../MCAL/01_DIO/DIO_prog.c"
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPinDirection':
+../MCAL/01_DIO/DIO_prog.c:36: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPinValue':
+../MCAL/01_DIO/DIO_prog.c:64: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8GetPinValue':
+../MCAL/01_DIO/DIO_prog.c:77: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPortDirection':
+../MCAL/01_DIO/DIO_prog.c:144: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8SetPortValue':
+../MCAL/01_DIO/DIO_prog.c:205: warning: control reaches end of non-void function
+../MCAL/01_DIO/DIO_prog.c: In function 'DIO_u8GetPortValue':
+../MCAL/01_DIO/DIO_prog.c:234: warning: control reaches end of non-void function
+Finished building: ../MCAL/01_DIO/DIO_prog.c
+ 
+Building target: asd.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,asd.map -mmcu=atmega32 -o "asd.elf"  ./MCAL/01_DIO/DIO_prog.o  ./zzz.o   
+Finished building target: asd.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S asd.elf  >"asd.lss"
+Finished building: asd.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex asd.elf  "asd.hex"
+Finished building: asd.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 asd.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3272 bytes (10.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:35:12 Build Finished (took 1s.128ms)
+

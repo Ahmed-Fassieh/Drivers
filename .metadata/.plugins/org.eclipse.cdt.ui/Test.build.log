@@ -1,0 +1,41 @@
+10:40:26 **** Incremental Build of configuration Debug for project Test ****
+make all 
+Building file: ../DIO_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"DIO_prog.d" -MT"DIO_prog.o" -c -o "DIO_prog.o" "../DIO_prog.c"
+../DIO_prog.c: In function 'DIO_u8SetPinDirection':
+../DIO_prog.c:36: warning: control reaches end of non-void function
+../DIO_prog.c: In function 'DIO_u8SetPinValue':
+../DIO_prog.c:64: warning: control reaches end of non-void function
+../DIO_prog.c: In function 'DIO_u8GetPinValue':
+../DIO_prog.c:77: warning: control reaches end of non-void function
+../DIO_prog.c: In function 'DIO_u8SetPortDirection':
+../DIO_prog.c:117: warning: control reaches end of non-void function
+../DIO_prog.c: In function 'DIO_u8SetPortValue':
+../DIO_prog.c:134: warning: control reaches end of non-void function
+../DIO_prog.c: In function 'DIO_u8GetPortValue':
+../DIO_prog.c:163: warning: control reaches end of non-void function
+../DIO_prog.c: In function 'main':
+../DIO_prog.c:170: warning: passing argument 3 of 'DIO_u8GetPinValue' makes pointer from integer without a cast
+Finished building: ../DIO_prog.c
+ 
+Building file: ../LCD_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"LCD_prog.d" -MT"LCD_prog.o" -c -o "LCD_prog.o" "../LCD_prog.c"
+In file included from ../LCD_prog.c:6:
+c:/embedded imt/programs/01- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/embedded imt/programs/01- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD_prog.c:6:
+c:/embedded imt/programs/01- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD_prog.c
+ 
+Building target: Test.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Test.map -mmcu=atmega16 -o "Test.elf"  ./DIO_prog.o ./LCD_prog.o   
+./LCD_prog.o: In function `LCD_vid_SendCommand':
+../LCD_prog.c:9: multiple definition of `main'
+./DIO_prog.o:../DIO_prog.c:8: first defined here
+make: *** [Test.elf] Error 1
+
+10:40:27 Build Finished (took 1s.62ms)
+

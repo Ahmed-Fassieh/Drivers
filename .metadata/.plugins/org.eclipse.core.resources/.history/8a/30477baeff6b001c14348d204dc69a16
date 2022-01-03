@@ -1,0 +1,28 @@
+#include "../../Liberary/STD_TYPES.h"
+#include "../../Liberary/BIT_MATH.h"
+#include "../../MCAL/01_DIO/DIO_interface.h"
+#include "../03_DcMotor/H_Bridge_configuration.h"
+
+
+void DCMotor_vid_Direction_ON(u8 Rot_Dir)
+{
+	DIO_u8SetPortDirection(portD,portOutput);
+
+	if(Rot_Dir == ClockWise)
+	{
+		DIO_u8GetPinValue(H_Bridge_Port,TR2,pinLow);
+		DIO_u8GetPinValue(H_Bridge_Port,TR4,pinLow);
+
+		DIO_u8GetPinValue(H_Bridge_Port,TR1,pinHigh);
+		DIO_u8GetPinValue(H_Bridge_Port,TR3,pinHigh);
+	}
+
+	else if(Rot_Dir == Anti_ClockWise)
+	{
+		DIO_u8GetPinValue(H_Bridge_Port,TR1,pinLow);
+		DIO_u8GetPinValue(H_Bridge_Port,TR3,pinLow);
+
+		DIO_u8GetPinValue(H_Bridge_Port,TR2,pinHigh);
+		DIO_u8GetPinValue(H_Bridge_Port,TR4,pinHigh);
+	}
+}

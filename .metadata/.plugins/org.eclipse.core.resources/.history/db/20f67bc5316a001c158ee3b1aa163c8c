@@ -1,0 +1,29 @@
+
+
+#include "Liberary/STD_TYPES.h"
+#include "Liberary/BIT_MATH.h"
+#include "HAL/01_LCD/LCD_interface.h"
+#include "MCAL/01_DIO/DIO_interface.h"
+#include "util/delay.h"
+
+int main()
+{
+	DIO_u8SetPortDirection(portD,portOutput);
+	for(u8 i=0;i<514;i++)
+	{
+		DIO_u8SetPinValue(portD,pin3__,pinHigh);
+		DIO_u8SetPinValue(portD,pin0__,pinLow);
+		_delay_ms(10);
+		DIO_u8SetPinValue(portD,pin0__,pinHigh);
+		DIO_u8SetPinValue(portD,pin1__,pinLow);
+		_delay_ms(10);
+		DIO_u8SetPinValue(portD,pin1__,pinHigh);
+		DIO_u8SetPinValue(portD,pin2__,pinLow);
+		_delay_ms(10);
+		DIO_u8SetPinValue(portD,pin2__,pinHigh);
+		DIO_u8SetPinValue(portD,pin3__,pinLow);
+		_delay_ms(10);
+	}
+	DIO_u8SetPortValue(portD,portHigh);
+}
+

@@ -1,0 +1,36 @@
+#include "Liberary/STD_TYPES.h"
+#include "Liberary/BIT_MATH.h"
+#include "MCAL/01_DIO/DIO_interface.h"
+#include "MCAL/02_Intrupt/GIE_interface.h"
+#include "MCAL/02_Intrupt/EXT_Int_interface.h"
+#include "util/delay.h"
+
+int main()
+{
+	/*
+	GIE_vidEnable();
+	DIO_u8SetPinDirection(portD,pin2__,input);
+	DIO_u8SetPinValue(portD,pin2__,pinHigh);
+	DIO_u8SetPinDirection(portB,pin2__,output);
+	ExtI_0_vidEnable();
+	*/
+	DIO_u8SetPinDirection(portD,pin1__,output);
+
+	while(1);
+	{
+		DIO_u8SetPinValue(portD,pin1__,pinHigh);
+		_delay_ms(500);
+		DIO_u8SetPinValue(portD,pin1__,pinLow);
+		_delay_ms(500);
+	}
+}
+/*
+void __vector_1(void)__attribute__((signal));
+
+void __vector_No(void)
+{
+	DIO_u8SetPinValue(portB,pin2__,pinHigh);
+	_delay_ms(500);
+	DIO_u8SetPinValue(portB,pin2__,pinLow);
+}
+*/

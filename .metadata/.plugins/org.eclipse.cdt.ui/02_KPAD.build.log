@@ -1,0 +1,20 @@
+14:48:23 **** Incremental Build of configuration Release for project 02_KPAD ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 02_KPAD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1508 bytes (4.6% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:48:23 Build Finished (took 250ms)
+

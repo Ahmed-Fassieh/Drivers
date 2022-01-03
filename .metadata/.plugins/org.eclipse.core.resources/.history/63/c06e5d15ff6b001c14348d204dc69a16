@@ -1,0 +1,7 @@
+#ifndef H_BRIDGE_INTERFACE_H
+#define H_BRIDGE_INTERFACE_H
+
+void DCMotor_vid_Direction(u8 Rot_Dir);
+
+
+#endif
